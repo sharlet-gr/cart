@@ -1,23 +1,46 @@
 var mongoose=require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 var userSchema = new mongoose.Schema({
-	emailid:{type: String, required: true, unique: true},
-	name:{type: String, required: true},
-	password:{type: String, required: true},
+	emailid:{
+		type: String, 
+		required: true, 
+		unique: true
+	},
+	name:{
+		type: String, 
+		required: true
+	},
+	password:{
+		type: String, 
+		required: true
+	},
 	address: String,
 	phone: String,
 	carts: [{
-		name: {type: String, unique: true, required:true},
+		name: {
+			type: String, 
+			unique: true, 
+			required:true
+		},
 		products: [{
-			product: {type: mongoose.Schema.Types.ObjectId,ref:'Product'},
+			product: {
+				type: mongoose.Schema.Types.ObjectId,
+				ref:'Product'
+			},
 			quantity: Number,
 			cost: Number
 		}]
 	}],
 	orders: [{
-		orderDate: {type:Date, default: Date.now},
+		orderDate: {
+			type:Date, 
+			default: Date.now
+		},
 		products: [{
-			product: {type: mongoose.Schema.Types.ObjectId,ref:'Product'},
+			product: {
+				type: mongoose.Schema.Types.ObjectId,
+				ref:'Product'
+			},
 			quantity: Number,
 			cost: Number
 		}]	
