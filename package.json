@@ -1,5 +1,5 @@
 {
-  "name": "cart_trial2",
+  "name": "cart",
   "version": "0.0.0",
   "private": true,
   "main": "index.js",
@@ -12,6 +12,7 @@
   "author": "Sharlet",
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.15.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
@@ -21,6 +22,7 @@
     "mongoose": "^4.5.4",
     "morgan": "~1.7.0",
     "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "serve-favicon": "~2.3.0"
   },
