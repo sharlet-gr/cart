@@ -1,10 +1,11 @@
-var mongoose=require('mongoose');
-var completedOrderSchema = new mongoose.Schema({
+import mongoose from 'mongoose';
+const orderSchema = new mongoose.Schema({
 	user:{
 		type: mongoose.Schema.Types.ObjectId,
 		ref:'User'
 	},
 	orderDate: Date,
+	delivered: Boolean,
 	products: [{
 		product: {
 			type: mongoose.Schema.Types.ObjectId,
@@ -15,5 +16,5 @@ var completedOrderSchema = new mongoose.Schema({
 	}]
 });
 
-mongoose.model('CompletedOrder', completedOrderSchema);
+mongoose.model('Order', orderSchema);
 
